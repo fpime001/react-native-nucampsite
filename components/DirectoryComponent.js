@@ -4,7 +4,6 @@ import { ListItem } from "react-native-elements";
 import { CAMPSITES } from "../shared/campsites";
 
 class Directory extends Component {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -13,8 +12,8 @@ class Directory extends Component {
   }
 
   static navigationOptions = {
-    title: 'Directory'
-  }
+    title: "Directory",
+  };
 
   render() {
     const { navigate } = this.props.navigation;
@@ -23,7 +22,7 @@ class Directory extends Component {
         <ListItem
           title={item.name}
           subtitle={item.description}
-          onPress={() => navigate('CampsiteInfo', { campsiteId: item.id })}
+          onPress={() => navigate("CampsiteInfo", { campsiteId: item.id })}
           leftAvatar={{ source: require("./images/react-lake.jpg") }}
         />
       );
